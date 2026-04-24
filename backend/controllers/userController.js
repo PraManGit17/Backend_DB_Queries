@@ -2,7 +2,7 @@ const db = require("../config/db");
 
 // GET all users
 exports.getUsers = (req, res) => {
-  db.query("SELECT * FROM users", (err, results) => {
+  db.query("SELECT * FROM products", (err, results) => {
     if (err) return res.status(500).json(err);
     res.json(results);
   });
