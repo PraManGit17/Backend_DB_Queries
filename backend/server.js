@@ -10,8 +10,8 @@ app.use(cors());
 app.use(express.json());
 
 // routes
-const userRoutes = require("./routes/userRoutes");
-app.use("/api", userRoutes);
+const ProductRoute = require("./routes/getProductRoute");
+app.use("/api", ProductRoute);
 
 // health check
 app.get("/", (req, res) => {
